@@ -1,5 +1,7 @@
 
 
 module.exports.home = (req ,res)=>{
-    res.send('Hii I am Controller');
+   return res.render('home', {
+        title: 'TODOList',
+    });
 }

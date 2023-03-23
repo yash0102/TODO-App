@@ -1,6 +1,8 @@
+// requiring modules
 const express = require('express');
 const app = express();
 const port = 8000;
+const expressLayout = require('express-ejs-layouts');
 
 
 
@@ -9,6 +11,19 @@ const port = 8000;
 // added a parser, it signifies the middleware
 app.use(express.urlencoded()); 
 
+// for getting static files
+app.use(express.static("assets"));
+
+app.use(expressLayout);
+
+//extract style and script from sub pages into layout 
+app.set('layout extractStyles',true);
+app.set('layout extractScripts',true);
+
+
+// set template/view engine
+app.set("view engine", "ejs");
+app.set("views", "./views"); // by default it's name is 'view' we can change using this
 
 
 
