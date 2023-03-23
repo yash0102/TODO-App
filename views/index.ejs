@@ -71,22 +71,25 @@
             <!-- End Form Section -->
 
             <!-- For Displaying TODO Lists -->
-            <div>
-                <% for(let i of todoList) { let j=0; let newIds='descids'+j; %>
-                    <div class="singleTask">
-                        <input type="checkbox" name="delechack" class="delechack" onclick="checkedOrNot()" uid = <%= i._id %> >
-                        <div class="name_and_dueDate">
-                            <p id=<%= i._id %>  uid = <%= i._id %> class="dispdsc"><%= i.desc %></p>
-                            <p id=<%= i._id + i.dueDate %> class="dueDate"  ><%= i.dueDate %></p>
-                        </div>
-                        <div class="catesec">
-                            <%= i.category %>
-                        </div>
-                            <div class="editClass"><a href="/editdata/?id=<%=i._id %>">Edit</a></div>
+           <div>
+            <% for(let i of tasks) {%>
+                <li>
+                    <span id="checkbox-container">
+                        <input id="check" type="checkbox" name="<%= i._id %>">
+                    </span>
+                    <div style="display: inline-block;">
+                        <span id="list-task"><%= i.task %></span> <br>
+                        <span id="list-date"><i class="fa fa-calendar" aria-hidden="true"></i><span id="task-date-value"> <%= i.date %></span></span>
                     </div>
-                    <% j++; } %>
-    
-            </div>
+                    <div class="list-category">
+                        <p id="category-box-text">
+                            <%= i.category %>
+                        </p>
+                    </div>
+
+                </li>
+                <%} %>
+           </div>
         </div>
         <!-- End Main Container -->
     </div>
