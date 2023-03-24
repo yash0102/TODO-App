@@ -1,0 +1,357 @@
+/* css design  */
+/* style for body */
+body{
+    margin: 0;
+    font-family: sans-serif Impact;
+    background-color: grey;
+    box-sizing: border-box;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#container::-webkit-scrollbar {
+    display: none;
+}
+
+#container{
+     border: 1px solid gray ;
+    width: 50%;
+    height: auto;
+    margin: 0 20rem;
+    background-color: whitesmoke;
+    padding-bottom: 40px;
+    overflow: auto;
+}
+
+/* style for TODO heading */
+h1{
+    color: gray;
+    text-align: center;
+    border-bottom: 1px solid rgb(184, 180, 180);
+    margin-bottom: 0;
+    padding-bottom: 6px;
+    height: 3rem;
+}
+
+/* style for form */
+.form_class{
+    height: auto;
+}
+
+/* style for form heading */
+h3 {
+    padding:3px 24px;
+    color: gray;
+    outline: none;
+    margin: 0;
+}
+
+/* style for description area */
+#description-section input{
+    height: 3rem;
+    width: 100%;
+    background-color: whitesmoke;
+    font-size: 1.1rem;
+    font-weight: 550;
+    color:grey;
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    padding-left: 22px;
+    padding-bottom: 0;
+}
+
+/* for placing placeholder in the left  */
+/* input[type="textarea"]::placeholder { 
+                  
+    /* Firefox, Chrome, Opera 
+    text-align: start;
+    padding-left: 20px;
+    margin-top: 0px;
+    color: lightgray;
+} */
+
+/* implemented some hover in description section */
+#description-section:hover{
+    box-shadow: 0px 0px 1px 1px cyan ;
+    background-color: #002F5E;
+    cursor: pointer;
+}
+
+#description-section input:hover{
+    background-color: wheat;
+    cursor: pointer;
+}
+
+/* design for select and option START */
+/* style for select and options input input area */
+
+#category-date-section{
+    display:flex;
+    margin-bottom: 1px solid gray;
+}
+
+.select_and_input{
+    width: 50%;
+    border-left: 1px solid gray;
+}
+
+.select_and_input select{
+    height: 45px;
+    width: 101%;
+    text-align:left;
+    padding-left: 20px;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+    font-size: 1rem;
+    font-weight: 550;
+    color: gray;
+}
+
+.select_and_input input{
+    height: 45px;
+    width: 90%;
+    text-align:left;
+    padding:0 20px 0 20px;
+    background-color: whitesmoke;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid grey;
+    color: gray;
+    font-size: 1rem;
+    font-weight: 550;
+}
+/* input[type="date"] {
+    text-align: left;
+    padding: 20px;
+  } */
+
+/* implemented some hover in category and date section */
+input:hover{
+    background-color: wheat;
+    cursor: pointer;
+}
+
+select:hover{
+    background-color: wheat;
+    cursor: pointer;
+}
+.select_and_input:hover {
+    box-shadow: 0px 0px 1px 1px cyan ;
+    background-color: #002F5E;
+    cursor: pointer;
+}
+/* design for select and option END */
+
+/* Button section started */
+#btn-section{
+    text-align: center;
+    /* border-bottom: 1px solid gray ; */
+}
+
+.buttonDesign{
+    height: 50px;
+    width: 160px;
+    color: white;
+    transition: transform 0.3s;
+    margin: 25px 1px 25px 1px;
+    font-size: 1.1rem;
+}
+.buttonDesign:hover{
+    box-shadow: 0px 0px 5px 2px white ; 
+    transform:scale(1.1);
+    cursor: pointer;
+}
+
+.colorRed{
+    background-color: red;
+    
+}
+
+.colorGrey{
+    background-color: green;
+}
+
+/* style for single task div container */
+.singleTask{
+    border-bottom: 1px solid gray;
+    width: 100%;
+    height: 75px;
+    color: #121111;
+    display: flex;
+    align-items: baseline;
+    position: relative;
+}
+
+/* list category section */
+
+.commonClass{
+    height: auto;
+    width: auto;
+    text-align: end;
+    padding: 5px;
+    border-radius: 15px;    
+    color: white;
+    transition: transform 0.3s;
+    background-color: aqua;
+}
+.commonClass:hover{
+    box-shadow: 0px 0px 5px 2px rgb(14, 6, 6) ; 
+    transform:scale(1.2);
+}
+
+
+/* edit class */
+#edit-select_and_input{
+    /* background-color: aqua; */
+    display: flex; 
+    width: 100%;
+}
+
+#category {
+    width: 50%;
+    border-right: 1px solid gray;
+    /* background-color: red; */
+}
+
+#date{
+    width: 50%;
+    /* background-color: green; */
+}
+
+/* .form-heading:hover{
+    box-shadow: 0px 0px 5px 2px white ; 
+    background-color: darkslategrey;
+    cursor: pointer; 
+} */
+
+
+
+/* 
+.edit-button{
+    background-color: brown;
+    margin: 2rem 15rem;
+    height: 50px;
+    width: 160px;
+    color: white;
+    transition: transform 0.3s;
+    font-size: 1.1rem;
+}
+
+.edit-button:hover{
+    box-shadow: 0px 0px 5px 2px white ; 
+    transform:scale(1.1);
+    cursor: pointer;
+} */
+
+
+
+
+
+/* style for del check */
+.delechack{
+    margin: 15px;
+
+}
+/* style for category section */
+
+/* work , personal , other category showing */
+/* .catesec{
+    border: 1px solid black;
+    background-color: chartreuse;
+    background-color: aqua;
+    border: 20px solid blue ;
+} */
+
+
+
+
+
+
+
+
+
+
+/* design for dates value */
+
+/* .datesValues{
+    transition: transform 0.3s;
+} */
+/* .datesValues:hover{
+    box-shadow: 0px 0px 5px 2px white ;
+    background-color: bisque;
+} */
+/* design for button */
+
+
+
+/* design for edit sction */
+/* .editClass{
+        transition: transform 0.3s;
+        position: absolute;
+        left: 80%;
+        margin: 20px;
+}
+.editClass:hover{
+    box-shadow: 0px 0px 5px 2px rgb(14, 6, 6) ; 
+    transform:scale(1.2);
+}
+
+.editClass a{
+text-decoration: none;
+color: white;
+border: 1px solid  white;
+padding: 4px;
+background-color: brown;
+} */
+
+
+/* input[type="date"]::placeholder { 
+                  
+     Firefox, Chrome, Opera 
+    text-align: start;
+     padding-left: 20px;
+    padding-top: 0px;
+    font-size: 1rem; 
+} */
+/* design for EDIT button*/
+/* .edit-button{
+    margin-top: 10px;
+    height: 30px;
+    width: 90px;
+    background-color: brown;
+    color: white;
+} */
+
+input.delechack{
+    width: 17px;
+    height: 17px;
+}
+
+/* Design for different category */
+.work{
+    background-color:lightcoral;
+        
+}
+.Personal{
+    background-color: skyblue;
+
+}
+.Claeaning{
+    background-color: green;
+}
+.Otheres{
+    background-color: teal;
+}
+.name_and_dueDate{
+    height: auto;
+    width: 30rem;
+}
+.dueDate{
+    width: fit-content;
+}
+.color-white{
+    color: white;
+}
+
