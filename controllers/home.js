@@ -2,18 +2,21 @@
 const TodoLists = require('../models/task');
 
 // rendering the home page
-module.exports.home = (req ,res)=>{
+module.exports.home = async (req ,res)=>{
     // console.log('fetching mongoose');
 
     // fetching mongoose
-
-    TodoLists.find({}).then((todo)=>{
+   try{ 
+        let todo = await TodoLists.find({});                      
         return res.render('home', {
             title: 'TODOList',
             todoList:todo
         });
-    })
-   
+
+    } catch (err) {
+       console.log("Error", err);
+       return;
+    }
 }
 
 

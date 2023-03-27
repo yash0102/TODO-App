@@ -86,7 +86,7 @@ h3 {
 }
 
 #description-section input:hover{
-    background-color: wheat;
+    background-color: snow;
     cursor: pointer;
 }
 
@@ -133,6 +133,12 @@ h3 {
     background-color: #1C1C27;
 
 }
+
+.date-icon::-webkit-calendar-picker-indicator {
+    background-image: url('../calendar.svg');
+    filter: invert(50%);
+}
+
 /* input[type="date"] {
     text-align: left;
     padding: 20px;
@@ -140,12 +146,12 @@ h3 {
 
 /* implemented some hover in category and date section */
 input:hover{
-    background-color: wheat;
+    background-color: snow;
     cursor: pointer;
 }
 
 select:hover{
-    background-color: wheat;
+    background-color: snow;
     cursor: pointer;
 }
 .select_and_input:hover {
@@ -188,24 +194,13 @@ select:hover{
 /* style for single task div container */
 .singleTask{
     padding: 10px 20px;
-    color: gainsboro;
+    color: darkgrey;
     display: flex;
     justify-content: space-between;
     border-top:1px solid gray;
     justify-content: baseline;
     
 }
-
-/* .details{
-    padding: 4px 30px;
-    color: gainsboro;
-    display: flex;
-    justify-content: space-between;
-    /* justify-content: baseline;
-    width: 90%;
-    border-top:1px solid gray;
-    position: relative;
-} */
 
 .item{
     
@@ -216,16 +211,8 @@ select:hover{
     text-decoration: line-through; 
 }
 
-
-/* .checkbox-task-date {
-    
-     border:1px solid green; 
-   
-    left: 4rem;
-}  */
 .task{
     font-size: 1.2rem;
-
 }
 
 .dueDate{
@@ -235,28 +222,17 @@ select:hover{
     padding-left: 35px;
 }
 
-/* span.category {
-    margin-top: 15px;
-    align-self: flex-start;
-    padding: .25em .75em;
-    /* border-radius: 1em; 
-    font-size: 1rem;
-    background: #56CCF2;
-    background: linear-gradient(to bottom, #2F80ED, #56CCF2);
-    color: #fafafa;
-} */
-
-#edit{
+/* #edit{
     margin-right: 15px;
 }
 
 #edit a{
-    text-decoration: none;
+text-decoration: none;
 color: white;
 border: 1px solid  white;
 padding: 4px;
 background-color: brown;
-}
+} */
 
 /* design for edit sction */
 /* .editClass{
@@ -281,16 +257,13 @@ background-color: #CFB317;
 /* list category section */
 
 .commonClass{
-    height: auto;
-    width: auto;
-    /* text-align: end; */
+    height: 1rem;
+    width: 3.5rem;
+    text-align: center;
     border-radius: 15px;    
-    color: white;
+    color: silver;
     transition: transform 0.3s;
-    background-color: aqua;
-
     margin-top: 15px;
-    align-self: flex-start;
     padding: .25em .75em;
     font-size: 1rem;
 }
@@ -306,7 +279,7 @@ background-color: #CFB317;
         
 }
 .Personal{
-    background-color: skyblue;
+    background-color: #9a20ae;
 
 }
 .Cleaning{
