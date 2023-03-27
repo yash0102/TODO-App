@@ -3,7 +3,7 @@
 body{
     margin: 0;
     font-family: sans-serif Impact;
-    background-color: grey;
+    background-color: silver;
     box-sizing: border-box;
 }
 
@@ -17,19 +17,25 @@ body{
     width: 50%;
     height: auto;
     margin: 0 20rem;
-    background-color: whitesmoke;
+    background-color: #1C1C27;
     padding-bottom: 40px;
     overflow: auto;
+    /* position: relative; */
 }
 
 /* style for TODO heading */
 h1{
-    color: gray;
+    color: #F10A51;
     text-align: center;
     border-bottom: 1px solid rgb(184, 180, 180);
     margin-bottom: 0;
     padding-bottom: 6px;
     height: 3rem;
+    font-weight: bolder;
+    font-size: 2.5rem;
+}
+h1 span{
+    color: #0084C6;
 }
 
 /* style for form */
@@ -43,6 +49,7 @@ h3 {
     color: gray;
     outline: none;
     margin: 0;
+    /* background-color: #1E1C28; */
 }
 
 /* style for description area */
@@ -58,6 +65,7 @@ h3 {
     outline: none;
     padding-left: 22px;
     padding-bottom: 0;
+    background-color: #1C1C27;
 }
 
 /* for placing placeholder in the left  */
@@ -97,21 +105,22 @@ h3 {
 
 .select_and_input select{
     height: 45px;
-    width: 101%;
+    width: 100%;
     text-align:left;
     padding-left: 20px;
-    background-color: whitesmoke;
     border: none;
     outline: none;
     border-bottom: 1px solid grey;
     font-size: 1rem;
     font-weight: 550;
     color: gray;
+    background-color: #1C1C27;
+
 }
 
 .select_and_input input{
     height: 45px;
-    width: 90%;
+    width: 88%;
     text-align:left;
     padding:0 20px 0 20px;
     background-color: whitesmoke;
@@ -121,6 +130,8 @@ h3 {
     color: gray;
     font-size: 1rem;
     font-weight: 550;
+    background-color: #1C1C27;
+
 }
 /* input[type="date"] {
     text-align: left;
@@ -153,10 +164,11 @@ select:hover{
 .buttonDesign{
     height: 50px;
     width: 160px;
-    color: white;
+    color: #bababc;
     transition: transform 0.3s;
     margin: 25px 1px 25px 1px;
-    font-size: 1.1rem;
+    font-size: 20px;
+    font-weight: 750;
 }
 .buttonDesign:hover{
     box-shadow: 0px 0px 5px 2px white ; 
@@ -165,36 +177,122 @@ select:hover{
 }
 
 .colorRed{
-    background-color: red;
+    background-color: #f10a51;
     
 }
 
 .colorGrey{
-    background-color: green;
+    background-color: #006B3F;
 }
 
 /* style for single task div container */
 .singleTask{
-    border-bottom: 1px solid gray;
-    width: 100%;
-    height: 75px;
-    color: #121111;
+    padding: 10px 20px;
+    color: gainsboro;
     display: flex;
-    align-items: baseline;
-    position: relative;
+    justify-content: space-between;
+    border-top:1px solid gray;
+    justify-content: baseline;
+    
 }
+
+/* .details{
+    padding: 4px 30px;
+    color: gainsboro;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: baseline;
+    width: 90%;
+    border-top:1px solid gray;
+    position: relative;
+} */
+
+.item{
+    
+    margin-right: 15px;
+}
+
+.item[type=checkbox]:checked + label {
+    text-decoration: line-through; 
+}
+
+
+/* .checkbox-task-date {
+    
+     border:1px solid green; 
+   
+    left: 4rem;
+}  */
+.task{
+    font-size: 1.2rem;
+
+}
+
+.dueDate{
+    margin-top: 5px;
+    color: gray;
+    font-size: 10px;
+    padding-left: 35px;
+}
+
+/* span.category {
+    margin-top: 15px;
+    align-self: flex-start;
+    padding: .25em .75em;
+    /* border-radius: 1em; 
+    font-size: 1rem;
+    background: #56CCF2;
+    background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+    color: #fafafa;
+} */
+
+#edit{
+    margin-right: 15px;
+}
+
+#edit a{
+    text-decoration: none;
+color: white;
+border: 1px solid  white;
+padding: 4px;
+background-color: brown;
+}
+
+/* design for edit sction */
+/* .editClass{
+        transition: transform 0.3s;
+        position: absolute;
+        left: 80%;
+        margin: 20px;
+}
+.editClass:hover{
+    box-shadow: 0px 0px 5px 2px rgb(14, 6, 6) ; 
+    transform:scale(1.2);
+}
+
+.editClass a{
+text-decoration: none;
+color: white;
+border: 1px solid  white;
+padding: 4px;
+background-color: #CFB317;
+} */
 
 /* list category section */
 
 .commonClass{
     height: auto;
     width: auto;
-    text-align: end;
-    padding: 5px;
+    /* text-align: end; */
     border-radius: 15px;    
     color: white;
     transition: transform 0.3s;
     background-color: aqua;
+
+    margin-top: 15px;
+    align-self: flex-start;
+    padding: .25em .75em;
+    font-size: 1rem;
 }
 .commonClass:hover{
     box-shadow: 0px 0px 5px 2px rgb(14, 6, 6) ; 
@@ -202,9 +300,36 @@ select:hover{
 }
 
 
-/* edit class */
+/* Design for different category */
+.Work{
+    background-color:lightcoral;
+        
+}
+.Personal{
+    background-color: skyblue;
+
+}
+.Cleaning{
+    background-color: green;
+}
+.Others{
+    background-color: teal;
+}
+.name_and_dueDate{
+    height: auto;
+    width: 30rem;
+}
+.dueDate{
+    width: fit-content;
+}
+.color-white{
+    color: white;
+}
+
+
+/* edit class
 #edit-select_and_input{
-    /* background-color: aqua; */
+    /* background-color: aqua; 
     display: flex; 
     width: 100%;
 }
@@ -212,13 +337,20 @@ select:hover{
 #category {
     width: 50%;
     border-right: 1px solid gray;
-    /* background-color: red; */
+    /* background-color: red; 
 }
 
 #date{
     width: 50%;
-    /* background-color: green; */
-}
+    /* background-color: green; 
+} */
+
+/* #todo-list-container{
+    border: 2px solid #bababc;
+} */
+
+
+
 
 /* .form-heading:hover{
     box-shadow: 0px 0px 5px 2px white ; 
@@ -250,10 +382,10 @@ select:hover{
 
 
 /* style for del check */
-.delechack{
+/* .delechack{
     margin: 15px;
 
-}
+} */
 /* style for category section */
 
 /* work , personal , other category showing */
@@ -286,25 +418,7 @@ select:hover{
 
 
 
-/* design for edit sction */
-/* .editClass{
-        transition: transform 0.3s;
-        position: absolute;
-        left: 80%;
-        margin: 20px;
-}
-.editClass:hover{
-    box-shadow: 0px 0px 5px 2px rgb(14, 6, 6) ; 
-    transform:scale(1.2);
-}
 
-.editClass a{
-text-decoration: none;
-color: white;
-border: 1px solid  white;
-padding: 4px;
-background-color: brown;
-} */
 
 
 /* input[type="date"]::placeholder { 
@@ -323,35 +437,11 @@ background-color: brown;
     background-color: brown;
     color: white;
 } */
-
+/* 
 input.delechack{
     width: 17px;
     height: 17px;
-}
+} */
 
-/* Design for different category */
-.work{
-    background-color:lightcoral;
-        
-}
-.Personal{
-    background-color: skyblue;
 
-}
-.Claeaning{
-    background-color: green;
-}
-.Otheres{
-    background-color: teal;
-}
-.name_and_dueDate{
-    height: auto;
-    width: 30rem;
-}
-.dueDate{
-    width: fit-content;
-}
-.color-white{
-    color: white;
-}
 

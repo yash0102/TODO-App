@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = 8000;
 const expressLayout = require('express-ejs-layouts');
+const db = require('./config/mongoose');
 
 
 
@@ -24,6 +25,16 @@ app.set('layout extractScripts',true);
 // set template/view engine
 app.set("view engine", "ejs");
 app.set("views", "./views"); // by default it's name is 'view' we can change using this
+
+
+// creating contact list
+// var todoList = [
+//     {
+//     task : "Yash",
+//     category : "Work",
+//     date:"2023"
+//     }
+//   ];
 
 
 

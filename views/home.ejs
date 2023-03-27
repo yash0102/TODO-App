@@ -1,23 +1,49 @@
 <!-- Form Section Start -->
-<form action="/create_todo" method="POST">
+<form id="input-form" action="/create-todo" method="post">
     <%- include('_des_cate_date'); %>
-    <!-- Button Section Start -->
-    <div id="btn-section">
-        <button class="buttonDesign colorGrey" id="submitButton" type="submit"><i class="fa fa-plus-square"> </i>&nbsp; Add Task</button>
-        <button class="buttonDesign colorRed" id="deleteButton" type="submit"><i class="fa fa-trash-o"></i>	&nbsp;Delete Task</button>
-    </div>
-    <!--End Button Section -->
 </form>
 <!-- End Form Section -->
 
-            <!-- For Displaying TODO Lists -->
-           
+ <!-- Button Section Start -->
+ <div id="btn-section">
+    <button class="buttonDesign colorGrey" id="submitButton" type="submit" form="input-form"><i class="fa fa-plus-square"> </i>&nbsp; Add Task</button>
+    <button class="buttonDesign colorRed" id="deleteButton" type="submit" form="delete-form"><i class="fa fa-trash-o"></i>	&nbsp;Delete Task
+    </button>
+</div>
+<!--End Button Section -->
+
+ <!-- For Displaying TODO Lists -->
+ 
+ <!-- <%- include('_create'); %> -->
+
+ <div class="task-container">
+    <form id="delete-form" action="/delete-todo" method="POST">
+        <% for(let i = 0; i < todoList.length; i++) { %>
+            <div class="singleTask">
+                <div class="checkbox-task-date">
+                    <input type="checkbox" name= "tasks" class="item" value="<%= todoList[i]._id %>" id="<%= 'tasks' + (i + 1) %>" >
+                    <label class="task" for="<%= 'tasks' + (i + 1) %>">
+                        <%= todoList[i].description %>
+                    </label>
+
+                    <p class="dueDate"> 
+                        <i class="fa fa-calendar"></i>
+                        <%= todoList[i].dueDate %>
+                    </p>
+                </div>
+                
+                <% if(todoList[i].category != undefined) { %>
+                <span class="category"> <%= todoList[i].category %> </span>
+                <% } %>
+                <!-- <div id="edit"><a href="/editdata/?id=<%=i._id %>">Edit</a></div> -->
+            </div>
+        <% } %>
+    </form>
+</div>
 
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- adding sweetalert for alert notification -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Adding Js File -->
-    <script src="/assets/js/script.js"></script>
-</body>
-</html>
+    <script src="/js/script.js"></script>

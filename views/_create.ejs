@@ -1,0 +1,17 @@
+<div>
+    <% for(let i of todoList) { %>
+                <div class="singleTask">
+                    <input type="checkbox" name="deleteCheck" class="deleteCheck" onclick="checkedOrNot()" uniqueID = <%= i._id %> >
+                    <div class="name_and_dueDate">
+                        <p id=<%= i._id %> class="task" uniqueID = <%= i._id %>> <%= i.task %> </p>
+                        <p id=<%= i._id + i.date %> class="dueDate"  > <i class="fa fa-calendar"></i> <%= i.date %> </p>
+                    </div>
+                    <div class="category">
+                        <%= i.category %>
+                    </div>
+                        <div class="editClass"><a href="/editdata/?id=<%=i._id %>">Edit</a></div>
+                </div>
+        <% } %>
+ 
+
+</div>
