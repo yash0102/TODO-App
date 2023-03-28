@@ -26,18 +26,7 @@ app.set('layout extractScripts',true);
 app.set("view engine", "ejs");
 app.set("views", "./views"); // by default it's name is 'view' we can change using this
 
-
-// creating contact list
-// var todoList = [
-//     {
-//     task : "Yash",
-//     category : "Work",
-//     date:"2023"
-//     }
-//   ];
-
-
-
+// any request comes it reqiure 
 app.use('/', require('./routes'));// any request comes,
 
 
