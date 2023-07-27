@@ -10,6 +10,7 @@ const db = require('./config/mongoose');
 // middleware
 
 // added a parser, it signifies the middleware
+// it's a middleware parses this data and makes it available in the req.body object of the Express request object.
 app.use(express.urlencoded()); 
 
 // for getting static files

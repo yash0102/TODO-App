@@ -59,6 +59,7 @@ module.exports.create = async (req, res) => {
 
 // utility function to delete a single task
 function deleteOne(task) {
+    // The .exec() method is a function provided by Mongoose that is used to execute a query. 
     return TodoLists.findByIdAndDelete(task).exec();
 }
 
@@ -78,10 +79,9 @@ function deleteTasks(tasks) {
 // deleting tasks from the database
 module.exports.delete = async function(req, res) {
     var obj = req.body;
-    console.log(req.body);
+    // console.log(req.body);
 
-    if(obj && Object.keys(obj).length == 0
-        && Object.getPrototypeOf(obj) === Object.prototype)
+    if(obj && Object.keys(obj).length == 0)
         return res.redirect('back');
 
     var result = await deleteTasks(req.body.tasks);
